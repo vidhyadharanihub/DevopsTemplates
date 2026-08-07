@@ -81,5 +81,3 @@ spec:
             failureThreshold: 30
             periodSeconds: 10
 
-      imagePullSecrets:
-        - name: registry-secret
