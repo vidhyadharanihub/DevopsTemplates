@@ -51,6 +51,15 @@ spec:
                 secretKeyRef:
                   name: db-secret
                   key: password
+         
+      volumeMounts:
+            - name: app-storage
+              mountPath: /app/data
+
+      volumes:
+        - name: app-storage
+          persistentVolumeClaim:
+            claimName: app-pvc
 
           resources:
             requests:
